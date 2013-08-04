@@ -1,0 +1,794 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008">
+	<xs:import schemaLocation="wsdl_xsd1.xml" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+	<xs:complexType name="ArrayOfPlayerInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="PlayerInfo" nillable="true" type="tns:PlayerInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfPlayerInfo" nillable="true" type="tns:ArrayOfPlayerInfo" />
+	<xs:complexType name="PlayerInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfPlayerInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="ClubOfficialAbbrev" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="ClubOfficialName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="ClubUsualAbbrev" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="ClubUsualName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="Heigth" nillable="true" type="xs:unsignedByte" />
+					<xs:element minOccurs="0" name="IdClient" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdClub" type="xs:int" />
+					<xs:element minOccurs="0" name="IdCountry" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdOrganisation" type="xs:int" />
+					<xs:element minOccurs="0" name="IdPlayer" type="xs:int" />
+					<xs:element minOccurs="0" name="IdProfession" nillable="true" type="xs:short" />
+					<xs:element minOccurs="0" name="IdSex" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdShirt" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+					<xs:element minOccurs="0" name="IdUnit" nillable="true" type="xs:short" />
+					<xs:element minOccurs="0" name="Identifier" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="Loan" nillable="true" type="xs:boolean" />
+					<xs:element minOccurs="0" name="SecondName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="UsualName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="Weight" nillable="true" type="xs:unsignedByte" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PlayerInfo" nillable="true" type="tns:PlayerInfo" />
+	<xs:complexType name="BaseStructInfoOfPlayerInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="PlayerInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfPlayerInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfPlayerInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfPhotoInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="PhotoInfo" nillable="true" type="tns:PhotoInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfPhotoInfo" nillable="true" type="tns:ArrayOfPhotoInfo" />
+	<xs:complexType name="PhotoInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfPhotoInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdPlayer" type="xs:int" />
+					<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+					<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PhotoInfo" nillable="true" type="tns:PhotoInfo" />
+	<xs:complexType name="BaseStructInfoOfPhotoInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="PhotoInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfPhotoInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfPhotoInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfCustomTeam">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="CustomTeam" nillable="true" type="tns:CustomTeam" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfCustomTeam" nillable="true" type="tns:ArrayOfCustomTeam" />
+	<xs:complexType name="CustomTeam">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="AbbrevClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubMediaName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubStadiumName" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="ClubWebSiteUrl" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="Code5" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="IdClub" type="xs:int" />
+			<xs:element minOccurs="0" name="IdCountry" type="xs:int" />
+			<xs:element minOccurs="0" name="IdCurrentCompet" type="xs:int" />
+			<xs:element minOccurs="0" name="IdName" type="xs:int" />
+			<xs:element minOccurs="0" name="IdNameClub" type="xs:int" />
+			<xs:element minOccurs="0" name="IdStadium" nillable="true" type="xs:int" />
+			<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="StrIdCompets" nillable="true" type="xs:string" />
+			<xs:element minOccurs="0" name="TeamMediaName" nillable="true" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CustomTeam" nillable="true" type="tns:CustomTeam" />
+	<xs:complexType name="ArrayOfSeasonInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="SeasonInfo" nillable="true" type="tns:SeasonInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfSeasonInfo" nillable="true" type="tns:ArrayOfSeasonInfo" />
+	<xs:complexType name="SeasonInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfSeasonInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="IdCompetition" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+					<xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="SeasonInfo" nillable="true" type="tns:SeasonInfo" />
+	<xs:complexType name="BaseStructInfoOfSeasonInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="SeasonInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfSeasonInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfSeasonInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfCompetitionInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="CompetitionInfo" nillable="true" type="tns:CompetitionInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfCompetitionInfo" nillable="true" type="tns:ArrayOfCompetitionInfo" />
+	<xs:complexType name="CompetitionInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfCompetitionInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="IdCompetition" type="xs:int" />
+					<xs:element minOccurs="0" name="IdOrganizer" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdSex" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatus" type="xs:int" />
+					<xs:element minOccurs="0" name="IdType" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="CompetitionInfo" nillable="true" type="tns:CompetitionInfo" />
+	<xs:complexType name="BaseStructInfoOfCompetitionInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="CompetitionInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfCompetitionInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfCompetitionInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfPitchInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="PitchInfo" nillable="true" type="tns:PitchInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfPitchInfo" nillable="true" type="tns:ArrayOfPitchInfo" />
+	<xs:complexType name="PitchInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfPitchInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="IdCity" type="xs:int" />
+					<xs:element minOccurs="0" name="IdPitch" type="xs:int" />
+					<xs:element minOccurs="0" name="IdPitchName" type="xs:int" />
+					<xs:element minOccurs="0" name="IsAmisco" type="xs:boolean" />
+					<xs:element minOccurs="0" name="PitchName" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="PitchInfo" nillable="true" type="tns:PitchInfo" />
+	<xs:complexType name="BaseStructInfoOfPitchInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="PitchInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfPitchInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfPitchInfo3pw8U1P1" />
+	<xs:simpleType name="LanguageValue">
+		<xs:list>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Default" />
+					<xs:enumeration value="Error">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Francais">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Espagnol">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Anglais">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Italien">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Allemand">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Danois">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Portugais">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+					<xs:enumeration value="Arabic">
+						<xs:annotation>
+							<xs:appinfo>
+								<EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:list>
+	</xs:simpleType>
+	<xs:element name="LanguageValue" nillable="true" type="tns:LanguageValue" />
+	<xs:complexType name="ArrayOfProfessionInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="ProfessionInfo" nillable="true" type="tns:ProfessionInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfProfessionInfo" nillable="true" type="tns:ArrayOfProfessionInfo" />
+	<xs:complexType name="ProfessionInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfProfessionInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdProfession" type="xs:int" />
+					<xs:element minOccurs="0" name="Profession" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ProfessionInfo" nillable="true" type="tns:ProfessionInfo" />
+	<xs:complexType name="BaseStructInfoOfProfessionInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="ProfessionInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfProfessionInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfProfessionInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfUnitInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="UnitInfo" nillable="true" type="tns:UnitInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfUnitInfo" nillable="true" type="tns:ArrayOfUnitInfo" />
+	<xs:complexType name="UnitInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfUnitInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdUnit" type="xs:int" />
+					<xs:element minOccurs="0" name="Unit" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="UnitInfo" nillable="true" type="tns:UnitInfo" />
+	<xs:complexType name="BaseStructInfoOfUnitInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="UnitInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfUnitInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfUnitInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfTextCategoryInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TextCategoryInfo" nillable="true" type="tns:TextCategoryInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTextCategoryInfo" nillable="true" type="tns:ArrayOfTextCategoryInfo" />
+	<xs:complexType name="TextCategoryInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfTextCategoryInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="IdTextCategory" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TextCategoryInfo" nillable="true" type="tns:TextCategoryInfo" />
+	<xs:complexType name="BaseStructInfoOfTextCategoryInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="TextCategoryInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfTextCategoryInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfTextCategoryInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfTextInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="TextInfo" nillable="true" type="tns:TextInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfTextInfo" nillable="true" type="tns:ArrayOfTextInfo" />
+	<xs:complexType name="TextInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfTextInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdLanguage" type="xs:int" />
+					<xs:element minOccurs="0" name="IdText" type="xs:int" />
+					<xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="TextInfo" nillable="true" type="tns:TextInfo" />
+	<xs:complexType name="BaseStructInfoOfTextInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="TextInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfTextInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfTextInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfEncounterInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="EncounterInfo" nillable="true" type="tns:EncounterInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfEncounterInfo" nillable="true" type="tns:ArrayOfEncounterInfo" />
+	<xs:complexType name="EncounterInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfEncounterInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="ClubAName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="ClubBName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="CodeName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="CompetOrganizerName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="CompetitionType" type="xs:int" />
+					<xs:element minOccurs="0" name="DateAndTime" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="Duration" type="xs:int" />
+					<xs:element minOccurs="0" name="Duration1" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="Duration2" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="Duration3" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="Duration4" nillable="true" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="Groupe" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdCompany" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdCompetition" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdDay" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdEncounter" type="xs:int" />
+					<xs:element minOccurs="0" name="IdNameTeamA" type="xs:int" />
+					<xs:element minOccurs="0" name="IdNameTeamB" type="xs:int" />
+					<xs:element minOccurs="0" name="IdPitch" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdSeason" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatCalculationState" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdState" type="xs:int" />
+					<xs:element minOccurs="0" name="IdTeamA" type="xs:int" />
+					<xs:element minOccurs="0" name="IdTeamB" type="xs:int" />
+					<xs:element minOccurs="0" name="IdTour" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IsAmisco" type="xs:boolean" />
+					<xs:element minOccurs="0" name="MatchCode" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="MatchState" nillable="true" type="tns:MatchState" />
+					<xs:element minOccurs="0" name="MatchType" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="NbActions" type="xs:int" />
+					<xs:element minOccurs="0" name="NbPeriods" type="xs:int" />
+					<xs:element minOccurs="0" name="NbStats" type="xs:int" />
+					<xs:element minOccurs="0" name="NumDay" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndFinalShot_TeamA" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndFinalShot_TeamB" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndOfficialTime_TeamA" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndOfficialTime_TeamB" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndProlongation_TeamA" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ScoreEndProlongation_TeamB" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="Score_TeamA" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="Score_TeamB" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="SeasonEnd" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="SeasonName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="SeasonStart" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="TeamAC5" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="TeamAName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="TeamBC5" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="TeamBName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="TpSynchroVideoMT1" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="TpSynchroVideoMT2" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="TpSynchroVideoMT3" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="TpSynchroVideoMT4" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="VideoMatchState" nillable="true" type="xs:boolean" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EncounterInfo" nillable="true" type="tns:EncounterInfo" />
+	<xs:complexType name="BaseStructInfoOfEncounterInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="EncounterInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfEncounterInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfEncounterInfo3pw8U1P1" />
+	<xs:simpleType name="MatchState">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Calculated" />
+			<xs:enumeration value="NoActions" />
+			<xs:enumeration value="NoStatistics" />
+			<xs:enumeration value="JustMatchSheet" />
+			<xs:enumeration value="Empty" />
+			<xs:enumeration value="Error" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="MatchState" nillable="true" type="tns:MatchState" />
+	<xs:complexType name="ArrayOfStatCategInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatCategInfo" nillable="true" type="tns:StatCategInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatCategInfo" nillable="true" type="tns:ArrayOfStatCategInfo" />
+	<xs:complexType name="StatCategInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatCategInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="CategName" nillable="true" type="xs:string" />
+					<xs:element minOccurs="0" name="IdCateg" type="xs:int" />
+					<xs:element minOccurs="0" name="IdLanguage" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatCategInfo" nillable="true" type="tns:StatCategInfo" />
+	<xs:complexType name="BaseStructInfoOfStatCategInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatCategInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatCategInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfStatCategInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatSubCategInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatSubCategInfo" nillable="true" type="tns:StatSubCategInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatSubCategInfo" nillable="true" type="tns:ArrayOfStatSubCategInfo" />
+	<xs:complexType name="StatSubCategInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatSubCategInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdLanguage" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatCateg" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatSubCateg" type="xs:int" />
+					<xs:element minOccurs="0" name="StatSubCategName" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatSubCategInfo" nillable="true" type="tns:StatSubCategInfo" />
+	<xs:complexType name="BaseStructInfoOfStatSubCategInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatSubCategInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatSubCategInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatSubCategInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatInfo" nillable="true" type="tns:StatInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatInfo" nillable="true" type="tns:ArrayOfStatInfo" />
+	<xs:complexType name="StatInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdLanguage" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatCateg" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatDef" type="xs:int" />
+					<xs:element minOccurs="0" name="StatName" nillable="true" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatInfo" nillable="true" type="tns:StatInfo" />
+	<xs:complexType name="BaseStructInfoOfStatInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfStatInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatValueInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatValueInfo" nillable="true" type="tns:StatValueInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatValueInfo" nillable="true" type="tns:ArrayOfStatValueInfo" />
+	<xs:complexType name="StatValueInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatValueInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdEncounter" type="xs:int" />
+					<xs:element minOccurs="0" name="IdEntity" type="xs:int" />
+					<xs:element minOccurs="0" name="IdPeriod" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatDef" type="xs:int" />
+					<xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
+					<xs:element minOccurs="0" name="ZoneX1" nillable="true" type="xs:short" />
+					<xs:element minOccurs="0" name="ZoneX2" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ZoneY1" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ZoneY2" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ZoneZ1" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="ZoneZ2" nillable="true" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatValueInfo" nillable="true" type="tns:StatValueInfo" />
+	<xs:complexType name="BaseStructInfoOfStatValueInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatValueInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatValueInfo3pw8U1P1" nillable="true" type="tns:BaseStructInfoOfStatValueInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatSeasonValueInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatSeasonValueInfo" nillable="true" type="tns:StatSeasonValueInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatSeasonValueInfo" nillable="true" type="tns:ArrayOfStatSeasonValueInfo" />
+	<xs:complexType name="StatSeasonValueInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatSeasonValueInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdEntity" type="xs:int" />
+					<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatDef" type="xs:int" />
+					<xs:element minOccurs="0" name="IdTypeStatSeasonValue" type="xs:int" />
+					<xs:element minOccurs="0" name="NbEncountersUsed" type="xs:double" />
+					<xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatSeasonValueInfo" nillable="true" type="tns:StatSeasonValueInfo" />
+	<xs:complexType name="BaseStructInfoOfStatSeasonValueInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatSeasonValueInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatSeasonValueInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatSeasonValueInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatSeasonActorInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatSeasonActorInfo" nillable="true" type="tns:StatSeasonActorInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatSeasonActorInfo" nillable="true" type="tns:ArrayOfStatSeasonActorInfo" />
+	<xs:complexType name="StatSeasonActorInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatSeasonActorInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdActor" type="xs:int" />
+					<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+					<xs:element minOccurs="0" name="NbCompleteMatchs" type="xs:int" />
+					<xs:element minOccurs="0" name="NbMatchAmiscoPro" type="xs:int" />
+					<xs:element minOccurs="0" name="NbMatchVideoPro" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatSeasonActorInfo" nillable="true" type="tns:StatSeasonActorInfo" />
+	<xs:complexType name="BaseStructInfoOfStatSeasonActorInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatSeasonActorInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatSeasonActorInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatSeasonActorInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatEncounterInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatEncounterInfo" nillable="true" type="tns:StatEncounterInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatEncounterInfo" nillable="true" type="tns:ArrayOfStatEncounterInfo" />
+	<xs:complexType name="StatEncounterInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatEncounterInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdEncounter" type="xs:int" />
+					<xs:element minOccurs="0" name="NbActions" nillable="true" type="xs:int" />
+					<xs:element minOccurs="0" name="NbStats" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatEncounterInfo" nillable="true" type="tns:StatEncounterInfo" />
+	<xs:complexType name="BaseStructInfoOfStatEncounterInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatEncounterInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatEncounterInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatEncounterInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatActorEncounterInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatActorEncounterInfo" nillable="true"
+				type="tns:StatActorEncounterInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatActorEncounterInfo" nillable="true" type="tns:ArrayOfStatActorEncounterInfo" />
+	<xs:complexType name="StatActorEncounterInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatActorEncounterInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="EncounterComplete" type="xs:boolean" />
+					<xs:element minOccurs="0" name="IdActor" type="xs:int" />
+					<xs:element minOccurs="0" name="IdEncounter" type="xs:int" />
+					<xs:element minOccurs="0" name="Period1Complete" type="xs:boolean" />
+					<xs:element minOccurs="0" name="Period2Complete" type="xs:boolean" />
+					<xs:element minOccurs="0" name="Period3Complete" nillable="true" type="xs:boolean" />
+					<xs:element minOccurs="0" name="Period4Complete" nillable="true" type="xs:boolean" />
+					<xs:element minOccurs="0" name="PrecentPlayed" nillable="true" type="xs:double" />
+					<xs:element minOccurs="0" name="TimePlayed" nillable="true" type="xs:int" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatActorEncounterInfo" nillable="true" type="tns:StatActorEncounterInfo" />
+	<xs:complexType name="BaseStructInfoOfStatActorEncounterInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatActorEncounterInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatActorEncounterInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatActorEncounterInfo3pw8U1P1" />
+	<xs:complexType name="ArrayOfStatActorTrendInfo">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded" name="StatActorTrendInfo" nillable="true" type="tns:StatActorTrendInfo" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ArrayOfStatActorTrendInfo" nillable="true" type="tns:ArrayOfStatActorTrendInfo" />
+	<xs:complexType name="StatActorTrendInfo">
+		<xs:complexContent mixed="false">
+			<xs:extension base="tns:BaseStructInfoOfStatActorTrendInfo3pw8U1P1">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="IdActor" type="xs:int" />
+					<xs:element minOccurs="0" name="IdStatDef" type="xs:int" />
+					<xs:element minOccurs="0" name="Value" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="StatActorTrendInfo" nillable="true" type="tns:StatActorTrendInfo" />
+	<xs:complexType name="BaseStructInfoOfStatActorTrendInfo3pw8U1P1">
+		<xs:annotation>
+			<xs:appinfo>
+				<GenericType Name="BaseStructInfoOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008"
+					xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+					<GenericParameter Name="StatActorTrendInfo" Namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+				</GenericType>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:sequence />
+	</xs:complexType>
+	<xs:element name="BaseStructInfoOfStatActorTrendInfo3pw8U1P1" nillable="true"
+		type="tns:BaseStructInfoOfStatActorTrendInfo3pw8U1P1" />
+</xs:schema>

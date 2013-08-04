@@ -1,0 +1,7 @@
+First I copied the WSDL file location to src/main/resources and all the XSD files it links too.
+Then remove the remote http location so that all locations for the wsdl and referenced xsd files are local.
+Then run wsimport.
+
+cd ~/development/workspaces/games/awsl-history-client/
+wsimport -keep -d src/main/java -wsdllocation https://portal.amisco.eu:9891/wsdl.xml src/main/resources/history.wsdl
+

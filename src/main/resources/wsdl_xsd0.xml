@@ -1,0 +1,592 @@
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://tempuri.org/">
+	<xs:import schemaLocation="wsdl_xsd2.xml" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	<xs:import schemaLocation="wsdl_xsd3.xml" namespace="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+	<xs:element name="GetActor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idActor" nillable="true" type="q1:ArrayOfint"
+					xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetActorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetActorResult" nillable="true" type="q2:ArrayOfPlayerInfo"
+					xmlns:q2="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamActors">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+				<xs:element minOccurs="0" name="date" type="xs:dateTime" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamActorsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTeamActorsResult" nillable="true" type="q3:ArrayOfPlayerInfo"
+					xmlns:q3="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncounterActors">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="Idencounter" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncounterActorsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetEncounterActorsResult" nillable="true" type="q4:ArrayOfPlayerInfo"
+					xmlns:q4="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetActorPhoto">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q5:ArrayOfint"
+					xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetActorPhotoResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetActorPhotoResult" nillable="true" type="q6:ArrayOfPhotoInfo"
+					xmlns:q6="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeam">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idTeams" nillable="true" type="q7:ArrayOfint"
+					xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTeamResult" nillable="true" type="q8:ArrayOfCustomTeam"
+					xmlns:q8="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamPlayersPhotos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+				<xs:element minOccurs="0" name="IdTeam" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamPlayersPhotosResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTeamPlayersPhotosResult" nillable="true" type="q9:ArrayOfPhotoInfo"
+					xmlns:q9="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamLogo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdTeams" nillable="true" type="q10:ArrayOfint"
+					xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTeamLogoResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTeamLogoResult" nillable="true" type="q11:ArrayOfPhotoInfo"
+					xmlns:q11="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeason">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idSeasons" nillable="true" type="q12:ArrayOfint"
+					xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeasonResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetSeasonResult" nillable="true" type="q13:ArrayOfSeasonInfo"
+					xmlns:q13="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCompetitionSeasons">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idCompetition" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCompetitionSeasonsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetCompetitionSeasonsResult" nillable="true" type="q14:ArrayOfSeasonInfo"
+					xmlns:q14="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeasonPlayersPhotos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeasonPlayersPhotosResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetSeasonPlayersPhotosResult" nillable="true" type="q15:ArrayOfPhotoInfo"
+					xmlns:q15="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeasonTeamsLogos">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdSeason" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetSeasonTeamsLogosResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetSeasonTeamsLogosResult" nillable="true" type="q16:ArrayOfPhotoInfo"
+					xmlns:q16="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCompetition">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idCompetitions" nillable="true" type="q17:ArrayOfint"
+					xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetCompetitionResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetCompetitionResult" nillable="true" type="q18:ArrayOfCompetitionInfo"
+					xmlns:q18="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPitch">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="idPitchs" nillable="true" type="q19:ArrayOfint"
+					xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetPitchResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetPitchResult" nillable="true" type="q20:ArrayOfPitchInfo"
+					xmlns:q20="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetProfessions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdLanguage" type="q21:LanguageValue"
+					xmlns:q21="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetProfessionsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetProfessionsResult" nillable="true" type="q22:ArrayOfProfessionInfo"
+					xmlns:q22="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetUnits">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdLanguage" type="q23:LanguageValue"
+					xmlns:q23="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetUnitsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetUnitsResult" nillable="true" type="q24:ArrayOfUnitInfo"
+					xmlns:q24="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTextCategories">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTextCategoriesResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTextCategoriesResult" nillable="true" type="q25:ArrayOfTextCategoryInfo"
+					xmlns:q25="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTexts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdTexts" nillable="true" type="q26:ArrayOfint"
+					xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdTextCategory" nillable="true" type="xs:int" />
+				<xs:element minOccurs="0" name="IdLanguage" type="q27:LanguageValue"
+					xmlns:q27="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetTextsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetTextsResult" nillable="true" type="q28:ArrayOfTextInfo"
+					xmlns:q28="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IsReady">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IsReadyResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IsReadyResult" type="xs:boolean" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceVersion">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ServiceVersionResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ServiceVersionResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncounters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdRencontres" nillable="true" type="q29:ArrayOfint"
+					xmlns:q29="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdSaison" nillable="true" type="xs:int" />
+				<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncountersResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetEncountersResult" nillable="true" type="q30:ArrayOfEncounterInfo"
+					xmlns:q30="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncountersByCompetName">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="CompetitionName" nillable="true" type="xs:string" />
+				<xs:element minOccurs="0" name="SeasonStartYear" nillable="true" type="xs:int" />
+				<xs:element minOccurs="0" name="SeasonEndYear" nillable="true" type="xs:int" />
+				<xs:element minOccurs="0" name="Day" nillable="true" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncountersByCompetNameResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetEncountersByCompetNameResult" nillable="true" type="q31:ArrayOfEncounterInfo"
+					xmlns:q31="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncountersByIdClients">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="ClientIdMatchs" type="xs:int" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetEncountersByIdClientsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetEncountersByIdClientsResult" nillable="true" type="q32:EncounterInfo"
+					xmlns:q32="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatCategs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdLanguage" type="q33:LanguageValue"
+					xmlns:q33="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatCategsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatCategsResult" nillable="true" type="q34:ArrayOfStatCategInfo"
+					xmlns:q34="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSubCategs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdStatCategs" nillable="true" type="q35:ArrayOfint"
+					xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdLanguage" type="q36:LanguageValue"
+					xmlns:q36="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSubCategsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatSubCategsResult" nillable="true" type="q37:ArrayOfStatSubCategInfo"
+					xmlns:q37="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdStatCategs" nillable="true" type="q38:ArrayOfint"
+					xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdLanguage" type="q39:LanguageValue"
+					xmlns:q39="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatsResult" nillable="true" type="q40:ArrayOfStatInfo"
+					xmlns:q40="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueTeam">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdTeams" nillable="true" type="q41:ArrayOfint"
+					xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q42:ArrayOfint"
+					xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdEncounters" nillable="true" type="q43:ArrayOfint"
+					xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueTeamResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatValueTeamResult" nillable="true" type="q44:ArrayOfStatValueInfo"
+					xmlns:q44="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonValueTeam">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdTeams" nillable="true" type="q45:ArrayOfint"
+					xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q46:ArrayOfint"
+					xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdSeasons" nillable="true" type="q47:ArrayOfint"
+					xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonValueTeamResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatSeasonValueTeamResult" nillable="true" type="q48:ArrayOfStatSeasonValueInfo"
+					xmlns:q48="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q49:ArrayOfint"
+					xmlns:q49="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q50:ArrayOfint"
+					xmlns:q50="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdEncounters" nillable="true" type="q51:ArrayOfint"
+					xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatValueActorResult" nillable="true" type="q52:ArrayOfStatValueInfo"
+					xmlns:q52="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonValueActor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q53:ArrayOfint"
+					xmlns:q53="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q54:ArrayOfint"
+					xmlns:q54="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdSeasons" nillable="true" type="q55:ArrayOfint"
+					xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonValueActorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatSeasonValueActorResult" nillable="true" type="q56:ArrayOfStatSeasonValueInfo"
+					xmlns:q56="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonActor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q57:ArrayOfint"
+					xmlns:q57="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q58:ArrayOfint"
+					xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdSeasons" nillable="true" type="q59:ArrayOfint"
+					xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatSeasonActorResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatSeasonActorResult" nillable="true" type="q60:ArrayOfStatSeasonActorInfo"
+					xmlns:q60="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueEncounter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdEncounters" nillable="true" type="q61:ArrayOfint"
+					xmlns:q61="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueEncounterResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatValueEncounterResult" nillable="true" type="q62:ArrayOfStatEncounterInfo"
+					xmlns:q62="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActorEncounter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q63:ArrayOfint"
+					xmlns:q63="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdEncounters" nillable="true" type="q64:ArrayOfint"
+					xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActorEncounterResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatValueActorEncounterResult" nillable="true" type="q65:ArrayOfStatActorEncounterInfo"
+					xmlns:q65="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActorTrend">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdActors" nillable="true" type="q66:ArrayOfint"
+					xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+				<xs:element minOccurs="0" name="IdStats" nillable="true" type="q67:ArrayOfint"
+					xmlns:q67="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetStatValueActorTrendResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetStatValueActorTrendResult" nillable="true" type="q68:ArrayOfStatActorTrendInfo"
+					xmlns:q68="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetExtracterRanking">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetExtracterRankingResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetExtracterRankingResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetExtracterHistoric">
+		<xs:complexType>
+			<xs:sequence />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetExtracterHistoricResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetExtracterHistoricResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchEvents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="IdMatch" type="xs:int" />
+				<xs:element minOccurs="0" name="IdLanguage" type="q69:LanguageValue"
+					xmlns:q69="http://schemas.datacontract.org/2004/07/AmiscoDataAccess2008" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetMatchEventsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="0" name="GetMatchEventsResult" nillable="true" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
